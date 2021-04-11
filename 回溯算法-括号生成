@@ -1,0 +1,27 @@
+```javascript
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var generateParenthesis = function(n) {
+let result = [];
+let left = 1;
+let right = 0;
+dfs(result,"(",left,right,n);
+return result;
+};
+/* 判断：什么时候可以加右括号或左括号：当left<n时可以一直加左括号 */
+function dfs(result,substr,left,right,n){
+    if(left == n && right == n){
+        //求出解
+        result.push(substr);
+        return;
+    }
+    if(left < n){
+        dfs(result,substr+'(',left+1,right,n);
+    }
+    if(right < left){
+        dfs(result,substr+')',left,right+1,n);
+    }
+}
+```
