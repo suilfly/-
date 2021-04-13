@@ -1,3 +1,23 @@
+#### 题目说明
+```
+输入：
+["CQueue","appendTail","deleteHead","deleteHead"]
+[[],[3],[],[]]
+输出：[null,null,3,-1]
+```
+- 输入的字符串代表操作：
+    - CQueue：创建双栈队列 :对应的参数 [] 为空 ：函数的返回结果：null=>对应return;
+    - appendTail：添加元素：对应参数 [3]
+    - deleteHead：元素出队：若队列为空则返回-1
+
+#### 解题思路
+- 借用b站看到的图
+<img src="../img/用两个栈实现队列.png"/>
+
+- 首先在创建队列时，初始化两个队列
+- 在入队时先把元素放入到stack_in中
+- 出队列时再将stack_in中的元素pop,再将元素按照原有顺序放入stack_out栈中
+
 ```javascript
 var CQueue = function() {
     this.stack_in = [];
