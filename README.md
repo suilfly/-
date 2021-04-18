@@ -1,5 +1,7 @@
 # 新闻阅读器-JS[组件式封装]
 > src目录结构
+
+```
 ├─assets
 │  ├─css
 │  ├─font
@@ -12,3 +14,4 @@
 ├─js
 ├─libs
 └─services
+```
