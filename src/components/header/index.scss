@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.44rem;
+  background-color: #cf5f55;
+  .title {
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 0.18rem;
+    }
+  }
+  .icon {
+    position: absolute;
+    top: 0;
+    height: 0.44rem;
+    /* &.left指.icon.left多类选择器 */
+    &.left {
+      left: .1rem;
+      display: flex;
+      align-items: center;
+      a {
+        font-size: 0;
+      }
+      .iconfont{
+          font-size: .20rem;
+          color: #fff;
+      }
+    }
+    &.right {
+      right: .1rem;
+      display: flex;
+      align-items: center;
+      a {
+        font-size: 0;
+      }
+      .iconfont{
+        font-size: .20rem;
+        color: #fff;
+
+    }
+    }
+  }
+}
